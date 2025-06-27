@@ -1,0 +1,201 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #000;
+  color: white;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.86); /* sedikit gelap tapi transparan */
+  backdrop-filter: blur(10px); /* efek blur */
+  -webkit-backdrop-filter: blur(10px); /* untuk Safari */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px ;
+  z-index: 1000;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1); /* opsional: garis bawah halus */
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  font-size: 24px;
+  align-items: start;
+  margin-left: 10px;
+
+}
+
+.logo-colored {
+  color: #00E5FF;
+  font-size: 24px;
+
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 12px;
+  font-size: 18px;
+  margin-right: 20px;
+  font-weight: bold; 
+  transition: background 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+ color: #00E5FF; 
+}
+
+/* Section Styles */
+.section {
+  height: 100vh;
+  padding: 100px 40px 40px; /* Top padding = navbar height */
+  scroll-margin-top: 80px; /* Prevent section from being hidden behind navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Hide navbar links on mobile by default */
+.navbar-links {
+  display: flex;
+  gap: 30px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 18px;
+    align-items: start;
+  text-decoration: none;
+    margin-left: -15px;
+  
+  }
+
+  
+.logo-colored {
+  color: #00E5FF;
+  font-size: 18px;
+
+}
+
+  .section {
+    padding: 100px 20px 40px;
+  }
+
+   .navbar {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+  
+.navbar-links {
+  flex-direction: column;
+  width: 100%;
+   background: rgba(0, 0, 0, 0.86); /* sedikit gelap tapi transparan */
+  backdrop-filter: blur(10px); /* efek blur */
+  -webkit-backdrop-filter: blur(10px); /* untuk Safari */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  text-align: center;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2); /* opsional: bayangan bawah */
+}
+
+.navbar-links.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  max-height: 500px; /* arbitrary large value, biar dropdown muncul */
+}
+
+/* Link style inside */
+.navbar-links a {
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.navbar-links a:hover {
+  background-color: rgba(255,255,255,0.05);
+}
+    
+  .menu-toggle {
+    cursor: pointer;
+    padding: 0px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+    margin-right: 10px;
+  }
+
+  .menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+.menu-toggle svg {
+  display: block;
+}
+
+
+  .navbar a {
+    padding: 10px;
+  }
+}

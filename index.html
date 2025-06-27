@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Haikal Taufiq</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/scroll.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("menu-toggle");
+            const links = document.getElementById("navbar-links");
+
+            // Toggle menu
+            toggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                links.classList.toggle("active");
+            });
+
+            // Close if clicked outside
+            document.addEventListener("click", (e) => {
+                if (!links.contains(e.target) && !toggle.contains(e.target)) {
+                    links.classList.remove("active");
+                }
+            });
+
+            // ✅ Close if user scrolls outside
+            window.addEventListener("scroll", () => {
+                if (links.classList.contains("active")) {
+                    links.classList.remove("active");
+                }
+            });
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="logo">
+        <a href="#home"><span class="logo">Haikal</span><span class="logo-colored">Taufiq</span></a>
+    </div>
+
+
+    <div class="menu-toggle" id="menu-toggle">
+        <svg width="25" height="25" viewBox="0 0 24 24" fill="none">
+            <rect y="4" width="20" height="2.5" rx="1.25" fill="#fff" />
+            <rect y="10.5" width="20" height="2.5" rx="1.25" fill="#fff" />
+            <rect y="17" width="20" height="2.5" rx="1.25" fill="#fff" />
+        </svg>
+    </div>
+
+
+    <div class="navbar-links" id="navbar-links">
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>    <head>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/home.js" defer></script>
+</head>
+<section id="home" class="section home-section">
+    <div class="home-container">
+        <div class="home-content">
+            <div class="left-border"></div>
+            <div class="text-content">
+                <h2>Hello, I'm</h2>
+                <h1><span class="highlight">Haikal</span> Taufiq</h1>
+                <div class="roles" id="roles"></div>
+                <p class="desc">
+                    I am a <span class="highlight">Multimedia</span> Engineering Technology student at
+                    <span class="highlight">Politeknik Negeri Batam</span>.
+                </p>
+            </div>
+        </div>
+       <div class="home-image" style="background: transparent; position: relative; z-index: 10;">
+         <div id="ppLottie" style="width: 300px; height: 300px;"></div>
+       </div>
+
+        <!-- Lottie Web Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+        <!-- File JS hasil convert dari pp.json -->
+        <script src="assets/json/pp.js"></script>
+
+        <!-- Load animasi -->
+        <script>
+        lottie.loadAnimation({
+            container: document.getElementById('ppLottie'),
+            animationData: ppLottieData,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true
+        });
+        </script>
+
+
+
+    </div>
+</section><head>
+    <link rel="stylesheet" href="css/about.css">
+    <script src="js/about.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<section id="about" class="about-section">
+    <div class="about-container">
+        <!-- KIRI -->
+        <div class="about-left">
+            <h1><span class="highlight2">About</span> Me</h1>
+            <p class="about-desc">
+                I am a passionate Multimedia Engineering Technology student at Politeknik Negeri Batam, experienced in web development, mobile apps, and 3D game creation. I combine technical skills in front-end and back-end development with a creative approach to multimedia solutions, driven by continuous learning and innovation.
+            </p>
+            <h2><span class="highlight">Tech</span> Stack :</h2>
+
+            <div class="tech-stack-wrapper">
+                <div class="tech-stack-track">
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/flutter.svg" alt="flutter">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/dart.svg" alt="dart">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/firebase.svg" alt="firebase">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/github.svg" alt="github">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="tech-stack/figma.svg" alt="figma">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/unity.svg" alt="unity">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/arduino.svg" alt="arduino">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/laravel.svg" alt="laravel">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/xampp.svg" alt="xampp">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/php.svg" alt="php">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/html5.svg" alt="html5">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/css.svg" alt="css">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/javascript.svg" alt="javascript">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/flutter.svg" alt="flutter">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/dart.svg" alt="dart">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/firebase.svg" alt="firebase">
+                    </div>
+                                        <div class="tech-icon">
+                        <img src="assets/tech-stack/github.svg" alt="github">
+                    </div>
+                                    </div>
+            </div>
+        </div>
+
+        <!-- KANAN -->
+        <div class="about-right">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                        <div class="certificate-card">
+                            <img src="assets/images/sertif-2.webp" alt="Certificate">
+                            <p class="cert-title">2nd Place Winner of PBL EXPO Polibatam – 2024</p>
+                        </div>
+                    </div>
+                                        <div class="swiper-slide">
+                        <div class="certificate-card">
+                            <img src="assets/images/sertif-RV.webp" alt="Certificate">
+                            <p class="cert-title">RevoU Software Engineering Online Course – 2023</p>
+                        </div>
+                    </div>
+                                        <div class="swiper-slide">
+                        <div class="certificate-card">
+                            <img src="assets/images/sertif-IT.webp" alt="Certificate">
+                            <p class="cert-title">Coursera Tech Support – 2023</p>
+                        </div>
+                    </div>
+                                        <div class="swiper-slide">
+                        <div class="certificate-card">
+                            <img src="assets/images/MTKH.webp" alt="Certificate">
+                            <p class="cert-title">Participant of PBL EXPO – 2024</p>
+                        </div>
+                    </div>
+                                    </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</section><head>
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+<section id="projects" class="project-section">
+    <div class="project-container">
+        <h1 class="section-title">
+            <span class="white">My </span><span class="highlight">Project</span>
+        </h1>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="assets/project-details/fish.webp" alt="Fish Feeder">
+                <h2>Automatic Fish Feeder with IoT Based</h2>
+                <p>A mobile app integrated with IoT to control and monitor an automatic fish feeder system remotely.</p>
+                <a href="https://github.com/HaikalTaufiq/squarepants" target="_blank" class="github-link">
+                    <img src="assets/tech-stack/github.svg" alt="GitHub" class="github-icon">
+                    <span>GitHub</span>
+                    <span class="contact-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="#00E5FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="transform: rotate(-45deg); margin-top: 2px;">
+                            <path d="M7 17L17 7" />
+                            <path d="M7 7h10v10" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="project-card">
+                <img src="assets/project-details/game.webp" alt="Fishing Game">
+                <h2>Unity 3D Fishing Game</h2>
+                <p>A 3D fishing game where players catch fish using a joystick built with Arduino, focused on survival gameplay.</p>
+                <a href="https://github.com/HaikalTaufiq/Grainded" target="_blank" class="github-link">
+                    <img src="assets/tech-stack/github.svg" alt="GitHub" class="github-icon">
+                    <span>GitHub</span>
+                    <span class="contact-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="#00E5FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="transform: rotate(-45deg); margin-top: 2px;">
+                            <path d="M7 17L17 7" />
+                            <path d="M7 7h10v10" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="project-card">
+                <img src="assets/project-details/class.webp" alt="E-Classroom">
+                <h2>E-Classroom with Flutter</h2>
+                <p>A Flutter-based e-learning platform with task upload, download, evaluation, and course management.</p>
+                <a href="https://github.com/HaikalTaufiq/Classroom" target="_blank" class="github-link">
+                    <img src="assets/tech-stack/github.svg" alt="GitHub" class="github-icon">
+                    <span>GitHub</span>
+                    <span class="contact-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="#00E5FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="transform: rotate(-45deg); margin-top: 2px;">
+                            <path d="M7 17L17 7" />
+                            <path d="M7 7h10v10" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="project-card">
+                <img src="assets/project-details/11.webp" alt="Garbage Payment">
+                <h2>Garbage Payment Laravel Website</h2>
+                <p>A Laravel app for managing waste payments in residential areas with payment tracking and scheduling.</p>
+                <a href="https://github.com/HaikalTaufiq/garbage-payment" target="_blank" class="github-link">
+                    <img src="assets/tech-stack/github.svg" alt="GitHub" class="github-icon" />
+                    <span>GitHub</span>
+                    <span class="contact-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17L17 7" />
+                            <path d="M7 7h10v10" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="project-card">
+                <img src="assets/project-details/booking.webp" alt="Room Booking">
+                <h2>Room Booking Laravel Website</h2>
+                <p>An internal company room reservation website for managing meeting schedules and booking approvals.</p>
+                <a href="https://github.com/HaikalTaufiq/booking-rooms" target="_blank" class="github-link">
+                    <img src="assets/tech-stack/github.svg" alt="GitHub" class="github-icon">
+                    <span>GitHub</span>
+                    <span class="contact-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="#00E5FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="transform: rotate(-45deg); margin-top: 2px;">
+                            <path d="M7 17L17 7" />
+                            <path d="M7 7h10v10" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section><head>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <div class="contact-left">
+            <h1 class="contact-title">
+                <span class="white">Contact </span><span class="highlight">Me</span>
+            </h1>
+            <div class="contact-list">
+                                <a href="mailto:haikaltaufiq4@gmail.com" class="contact-item" target="_blank">
+                    <img src="assets/tech-stack/gmail.svg" alt="icon" class="contact-icon">
+                    <span class="contact-text">haikaltaufiq4@gmail.com</span>
+                    <span class="contact-arrow">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#00E5FF"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            style="transform: rotate(-45deg);
+                                    margin-top: 5px;">
+                            <path d="M7 17L17 7" />
+                            <path d="M7 7h10v10" />
+                        </svg>
+                    </span>
+
+
+                </a>
+                                <a href="https://github.com/HaikalTaufiq" class="contact-item" target="_blank">
+                    <img src="assets/tech-stack/github.svg" alt="icon" class="contact-icon">
+                    <span class="contact-text">HaikalTaufiq</span>
+                    <span class="contact-arrow">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#00E5FF"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            style="transform: rotate(-45deg);
+                                    margin-top: 5px;">
+                            <path d="M7 17L17 7" />
+                            <path d="M7 7h10v10" />
+                        </svg>
+                    </span>
+
+
+                </a>
+                                <a href="https://www.linkedin.com/in/m-taufiq-karim-haikal-3050b1284/" class="contact-item" target="_blank">
+                    <img src="assets/tech-stack/linkedin.svg" alt="icon" class="contact-icon">
+                    <span class="contact-text">M Taufiq Karim Haikal</span>
+                    <span class="contact-arrow">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#00E5FF"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            style="transform: rotate(-45deg);
+                                    margin-top: 5px;">
+                            <path d="M7 17L17 7" />
+                            <path d="M7 7h10v10" />
+                        </svg>
+                    </span>
+
+
+                </a>
+                                <a href="https://instagram.com/haikal.taufiq" class="contact-item" target="_blank">
+                    <img src="assets/tech-stack/instagram.svg" alt="icon" class="contact-icon">
+                    <span class="contact-text">haikal.taufiq</span>
+                    <span class="contact-arrow">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#00E5FF"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            style="transform: rotate(-45deg);
+                                    margin-top: 5px;">
+                            <path d="M7 17L17 7" />
+                            <path d="M7 7h10v10" />
+                        </svg>
+                    </span>
+
+
+                </a>
+                            </div>
+        </div>
+        <script
+        src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+        type="module"
+        ></script>
+
+        <dotlottie-player
+        class="hero-lottie"
+        src="https://lottie.host/2823b79d-29ef-4572-9035-c4c75235d0fa/oO6OkGxtXs.lottie"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+        ></dotlottie-player>
+    </div>
+</section>
+
+</body>
+
+
+</html>

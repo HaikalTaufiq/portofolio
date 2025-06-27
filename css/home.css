@@ -1,0 +1,197 @@
+/* Section utama */
+.home-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container isi dalam */
+.home-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 30px;
+}
+
+/* Konten text dan border */
+.home-content {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+}
+
+/* Garis vertikal kiri */
+.left-border {
+  width: 12px;
+  border-radius: 10px;
+  height: 350px;
+  background: linear-gradient(180deg, #00E5FF, #00E5FF);
+  animation: gradientMove 4s infinite linear;
+  flex-shrink: 0;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+/* Teks */
+.text-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.home-content h2 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin: 0;
+}
+
+.home-content h1 {
+  font-size: 65px;
+  font-weight: 800;
+  letter-spacing: -3.5px;
+  margin: -10px 0 0;
+}
+
+.roles {
+  font-size: 60px;
+  font-weight: 500;
+  letter-spacing: -3.5px;
+  margin: -25px 0 10px;
+}
+
+.desc {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.highlight {
+  color: #00E5FF;
+}
+
+/* Gambar / Lottie */
+.home-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+ #ppLottie {
+    width: 400px !important; 
+    height: 400px !important;
+    transform: scaleX(-1); /* 🔁 Flip horizontal */
+  }
+
+/* Responsive tablet */
+@media (max-width: 992px) {
+  .home-content {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .home-content h1 {
+    font-size: 50px;
+    letter-spacing: -2px;
+  }
+
+  .roles {
+    font-size: 40px;
+    letter-spacing: -2px;
+  }
+
+  .desc {
+    font-size: 18px;
+  }
+
+  .left-border {
+    height: 250px;
+  }
+
+  .home-image lottie-player {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-section {
+    padding-top: 120px; /* kasih jarak dari navbar */
+    padding-bottom: 60px;
+  }
+
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 40px;
+  }
+
+  .home-content {
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    margin-top: 0;
+  }
+
+  .left-border {
+    display: none;
+  }
+
+  .text-content {
+    align-items: start;
+    text-align: start;
+  }
+
+  .home-content h2 {
+    font-size: 24px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+  }
+
+  .home-content h1 {
+    font-size: 40px;
+    letter-spacing: -2px;
+    margin-top: -5px;
+  }
+
+  .roles {
+    font-size: 28px;
+    letter-spacing: -1.5px;
+    margin-top: -15px;
+  }
+
+  .desc {
+    font-size: 16px;
+    margin-top: -10px;
+  }
+
+  .home-image {
+    margin-top: -300px;
+  }
+
+  .home-image lottie-player {
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
